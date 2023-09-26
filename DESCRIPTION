@@ -1,0 +1,18 @@
+Package: MatrixCreation
+Type: Package
+Title: Create Matrix Labels
+Version: 0.1.0
+Authors@: 
+    person("Ryan", "Smith", email = "ryan.mi.smith@gmail.com",
+                  role = c("aut", "cre"))
+Maintainer: Ryan Smith <ryan.mi.smith@gmail.com>
+Description: Create Matrix Labels
+License: Private Use
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    dplyr,
+    tidyr,
+    ggplot2,
+    R (>= 2.15)
+RoxygenNote: 7.2.3
