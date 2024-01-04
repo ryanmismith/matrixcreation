@@ -202,6 +202,13 @@ MatrixCreation <- function(District, StandID,
     )
   )
 
+  data <- data %>%
+    mutate(broadtype = case_when(
+      broadtype %in% c("S", "OS", "SH") & (is.numeric(PCT) & PCT > 0) | broadtype %in% c("S", "OS", "SH") & (is.logical(PCT) & PCT) ~ "S",
+      TRUE ~ broadtype
+    )
+   )
+
 
   data$Matrix <- paste0(data$broadtype, data$MSD, sep = "")
 
@@ -246,7 +253,6 @@ MatrixCreation <- function(District, StandID,
   return(data)
 
 }
-
 
 
 
